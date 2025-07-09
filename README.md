@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🍋 Lemonade Labs
 
-## Getting Started
+An educational platform that helps kids learn entrepreneurship by building their own pretend businesses. The app is designed to be engaging, responsive, and age-appropriate, with fun visuals and a clear onboarding experience.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Interactive Onboarding**: Step-by-step guide to create a pretend business
+- **Business Customization**: Choose business types, create logos, and taglines
+- **Parental Controls**: Safe environment with parental consent and oversight
+- **Kid-Friendly UI**: Colorful, engaging, and easy-to-use interface
+- **Responsive Design**: Works on desktop, tablet, and mobile devices
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18 or later
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/lemonade-labs.git
+   cd lemonade-labs
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
+
+## 🛠 Tech Stack
+
+- **Frontend**: Next.js 14 (App Router)
+- **Styling**: Tailwind CSS
+- **Animation**: Framer Motion
+- **Form Handling**: React Hook Form
+- **Icons**: Emoji and Heroicons
+- **Fonts**: Inter and Fredoka One
+
+## 📂 Project Structure
+
+```
+lemonade-labs/
+├── app/                    # App router
+│   ├── dashboard/         # Dashboard pages
+│   ├── onboarding/        # Onboarding flow
+│   ├── globals.css        # Global styles
+│   ├── layout.js          # Root layout
+│   └── page.js            # Homepage
+├── components/            # Reusable components
+│   ├── onboarding/        # Onboarding components
+│   └── ui/                # UI components
+├── public/                # Static files
+├── styles/                # CSS modules (if needed)
+├── tailwind.config.js     # Tailwind configuration
+└── postcss.config.js      # PostCSS configuration
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Design System
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Colors
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Primary: `#F59E0B` (Amber 500)
+- Background: Gradient from `#FEFCE8` to `#FFEDD5`
+- Text: `#1E293B` (Slate 800)
+- Accent: `#FCD34D` (Amber 300)
 
-## Learn More
+### Typography
 
-To learn more about Next.js, take a look at the following resources:
+- **Headings**: Fredoka One
+- **Body**: Inter
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🤝 Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) before making a pull request.
 
-## Deploy on Vercel
+## 📄 License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🙏 Acknowledgments
+
+- Built with ❤️ by [Your Name]
+- Inspired by the creativity and curiosity of young entrepreneurs everywhere

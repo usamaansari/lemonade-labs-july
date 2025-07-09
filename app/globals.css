@@ -1,21 +1,106 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --foreground-rgb: 23, 23, 23;
+  --background-start-rgb: 254, 252, 232; /* amber-50 */
+  --background-end-rgb: 255, 247, 237; /* amber-50 to orange-50 */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* Apply base styles */
+@layer base {
+  body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+      to bottom,
+      rgb(var(--background-start-rgb)),
+      rgb(var(--background-end-rgb))
+    );
+    min-height: 100vh;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #fef3c7; /* amber-100 */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #f59e0b; /* amber-500 */
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d97706; /* amber-600 */
+  }
+
+  /* Animation keyframes */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  /* Custom focus styles */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 focus:ring-offset-amber-50;
+  }
+
+  /* Button styles */
+  .btn {
+    @apply px-6 py-3 rounded-full font-medium transition-all duration-200 focus-ring;
+  }
+
+  .btn-primary {
+    @apply bg-amber-500 text-white hover:bg-amber-600 shadow-md hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-amber-800 border-2 border-amber-200 hover:bg-amber-50;
+  }
+
+  /* Form styles */
+  .input {
+    @apply w-full px-4 py-3 rounded-lg border border-amber-200 focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all duration-200;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-amber-800 mb-1;
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-200;
+  }
+
+  .card-header {
+    @apply px-6 py-4 border-b border-amber-100;
+  }
+
+  .card-body {
+    @apply p-6;
+  }
+
+  /* Custom animations */
+  .fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 }
 
