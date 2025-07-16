@@ -88,17 +88,64 @@ export default function Home() {
             Where young minds learn to build big ideas
           </h2>
           
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Link 
-              href="/onboarding" 
-              className="inline-block bg-red-400 hover:bg-red-500 text-white font-bold py-4 px-12 rounded-full text-xl shadow-lg hover:shadow-xl transition-all duration-300"
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 max-w-3xl mx-auto">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              Create Your Business
-            </Link>
-          </motion.div>
+              <Link 
+                href="/onboarding" 
+                className="block bg-red-400 hover:bg-red-500 text-white font-bold py-4 px-6 rounded-full text-center shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                Create Your Business
+              </Link>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Link 
+                href="/website-builder" 
+                className="block bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold py-4 px-6 rounded-full text-center shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                Build Your Website
+              </Link>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Link 
+                href="/services" 
+                className="block bg-purple-400 hover:bg-purple-500 text-white font-bold py-4 px-6 rounded-full text-center shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                Offer Services
+              </Link>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Link 
+                href="/shop" 
+                className="block bg-blue-400 hover:bg-blue-500 text-white font-bold py-4 px-6 rounded-full text-center shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                Sell Products
+              </Link>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="sm:col-span-2"
+            >
+              <Link 
+                href="/book/alex" 
+                className="block bg-green-400 hover:bg-green-500 text-white font-bold py-4 px-6 rounded-full text-center shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                Book a Service (Demo)
+              </Link>
+            </motion.div>
+          </div>
         </motion.div>
 
         {/* Business Examples */}
